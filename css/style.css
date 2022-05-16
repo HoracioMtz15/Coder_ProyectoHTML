@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*background-color: blue;*/
+    font-family: 'Radio Canada', sans-serif;
+    
+    /*Font size 10px relativo*/
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /*Tamaño relativo sobre el html*/
+    font-size: 1rem;
+}
+
+.mainIndex{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "servicios eventos";
+    grid-area: main;
+}
+
+section{
+    border: solid 1px black;
+}
+
+footer{
+    grid-area:footer;
+}
+
+li:hover{
+background-color: black;
+color: white;
+font-size: 120%;
+}
+
+.gridContainerIndex{
+    display: grid;
+    grid-template-columns: 80% ;
+    grid-template-rows: 0.2fr 0.1fr 0.6fr 0.1fr ;
+    grid-template-areas: 
+    "banner"
+    "navBar"
+    "main"
+    "footer";
+}
+
+.banner{
+    grid-area:banner;
+}
+
+.title{
+    /*Tamaño relativo sobre el padre*/
+    font-size: 3em;
+}
+
+.navBar{
+    text-align: end;
+    background-color: red;
+    font-size: 1.5em;
+    grid-area:navBar;
+}
+
+.navMenu:hover {
+    background-color: blue;
+    color: white;
+    font-size: 120%;
+}
+
+.categoriasHeader{
+    font-size: 2em;
+}
+
+.servicios{
+    border: solid 1px black;
+    background-color: lightblue;
+    overflow: auto;
+    grid-area: servicios;
+ /*   justify-content: space-between ;*/
+}
+
+.containerEventos{
+    display: flex;
+    flex-direction: column;
+    grid-area: eventos;
+}
+
+.eventosHeader{
+    font-size: 400%;
+    background-color: rgb(9, 104, 72);
+    text-align: center;
+}
+
+.eventos{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.evento{
+    border: solid 1px black;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.evento_img{
+    width: 315px;
+    height: 315px;
+}
+
+
+/*restaurante.html*/
+
+.rest_img{
+    height: 300px;
+    width: 400px;
+}
+
+.restsContainer{
+    display: flex;
+    flex-direction: row; 
+}
+
+.restaurant{    
+    margin-right: 20px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: row;
+}
+
+.gridContainerRest{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 0.2fr 0.1fr 0.6fr 0.1fr ;
+    grid-template-areas: 
+    "banner"
+    "navBar"
+    "restsContainer"
+    "footer";
+}
+
+
+@media only screen and (max-width:550px )
+{
+
+    .mainIndex{
+        display: flex;
+        flex-direction: column;
+        /*justify-content:flex-end;
+        grid-area: main;*/
+    }
+
+    .evento{
+        border: solid 1px black;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mainRest{
+        /*display: grid;
+        grid-template-areas: 
+        "banner"
+        "navBar"
+        "restsContainer"
+        "footer";*/
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .restsContainer{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .restaurant{    
+        margin-right: 20px;
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        display: flex;
+        flex-direction: column;
+    }
+
+}
